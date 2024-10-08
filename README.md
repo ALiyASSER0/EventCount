@@ -1,16 +1,31 @@
-# event_count_downar
+# Event Countdown App
 
-A new Flutter project.
+## Overview
+The **Event Countdown App** is a Flutter-based mobile application that helps users track and receive reminders for important dates, such as personal events and installment payments. The app allows users to set up various events, with notifications as reminders, ensuring they never miss an important occasion or payment deadline.
 
-## Getting Started
+## Features
+- **Event Tracking**: Add, edit, and delete events with customizable names, dates, and reminders.
+- **Installment Reminder**: Specialized feature for setting installment payment reminders.
+- **Countdown Display**: Visual countdown to event dates.
+- **Push Notifications**: Alerts users as the event or payment date approaches.
+- **User-Friendly Interface**: Simple and intuitive UI for easy event management.
 
-This project is a starting point for a Flutter application.
+## Screenshots
+Here are a few screenshots of the app in action:
 
-A few resources to get you started if this is your first Flutter project:
+- Event List Screen
+- Add Event Screen
+- Event Countdown Screen
+- Installment Reminder Screen
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+*(Insert images here)*
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Technologies Used
+- **Flutter**: Framework for building cross-platform applications.
+- **Dart**: Programming language used with Flutter.
+- **SQLite/Firestore** (or your preferred storage solution): Used for event data persistence.
+
+## Future Enhancements
+- Recurring events feature.
+- Custom notification sounds.
+- Dark mode support.
