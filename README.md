@@ -18,7 +18,20 @@ Here are a few screenshots of the app in action:
 - Event Countdown Screen
 - Installment Reminder Screen
 
-*(Insert images here)*
+![image](https://github.com/user-attachments/assets/7e05b172-4174-4ab2-8ccb-1c19f39840ff)  ![image](https://github.com/user-attachments/assets/1ef6c442-2715-4339-8c55-e5e3b36614cc) ![image](https://github.com/user-attachments/assets/8e4a2252-7f91-46bd-8a6f-685b9cf08d0b) ![image](https://github.com/user-attachments/assets/cd9e5859-26c7-4077-8167-9d691f2fa8b7) ![image](https://github.com/user-attachments/assets/0c421a58-7180-46ce-8cce-45db3534718e) ![image](https://github.com/user-attachments/assets/3db35642-f28a-4d2c-baed-d566f96c4ebd) ![image](https://github.com/user-attachments/assets/909d46cb-f33e-46c3-a63c-ee590881b5e4)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Technologies Used
 - **Flutter**: Framework for building cross-platform applications.
