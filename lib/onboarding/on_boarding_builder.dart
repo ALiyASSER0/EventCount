@@ -17,19 +17,19 @@ class OnBoardingBuilder extends StatelessWidget {
                 Text(
 
                   textAlign: TextAlign.center,
-                  '${model.label}',
+                  model.label,
                   style: TextStyle(
                     fontSize: 22.sp,
                     fontWeight: FontWeight.bold,
 
                   ),
                   ),
-               Image.asset('${model.image}'),
+               Image.asset(model.image),
                 SizedBox(height: 3.h,),
                 Text(
 
                   textAlign: TextAlign.center,
-                  '${model.description}',
+                  model.description,
                   style: TextStyle(
                     fontSize: 19.sp,
                     color: Colors.grey[600],
