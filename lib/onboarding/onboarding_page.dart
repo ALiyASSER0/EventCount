@@ -1,11 +1,11 @@
 import 'package:event_count_downar/constants/colors.dart';
 import 'package:event_count_downar/helpers/enums.dart';
 import 'package:event_count_downar/helpers/shared.dart';
-import 'package:event_count_downar/home_page.dart';
 import 'package:event_count_downar/onboarding/on_boarding_builder.dart';
 import 'package:event_count_downar/onboarding/onboarding_model.dart';
 import 'package:event_count_downar/routing/routes.dart';
-import 'package:event_count_downar/widgets/custom_button.dart';
+import 'package:event_count_downar/views/home_view.dart';
+import 'package:event_count_downar/views/widgets/custem_widget/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -21,7 +21,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
   saveOnBoarding(bool done) {
     Navigator.pushNamedAndRemoveUntil(
       context,
-      Routes.home,
+      Routes.homeView,
       (route) => false,
     );
   }
@@ -51,7 +51,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       key: SharedKeys.islastOnBoarding, value: islast);
                   Navigator.pushAndRemoveUntil(
                       context,
-                      MaterialPageRoute(builder: (context) => HomePage()),
+                      MaterialPageRoute(builder: (context) => HomeView()),
                       (route) => false);
                   isfirst = true;
                 });
@@ -119,7 +119,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                             key: SharedKeys.islastOnBoarding, value: islast);
                         Navigator.pushAndRemoveUntil(
                             context,
-                            MaterialPageRoute(builder: (context) => HomePage()),
+                            MaterialPageRoute(builder: (context) => HomeView()),
                             (route) => false);
                         isfirst = true;
                       })

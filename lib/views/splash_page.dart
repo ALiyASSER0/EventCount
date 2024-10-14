@@ -19,7 +19,7 @@ class _SplashPageState extends State<SplashPage> {
     Future.delayed(const Duration(seconds: 5), () {
       Shared.getBOOL(key: SharedKeys.islastOnBoarding) ? Navigator.pushNamedAndRemoveUntil(
         context,
-        Routes.home,
+        Routes.homeView,
         (route) => false,
 
       ):
@@ -40,7 +40,7 @@ class _SplashPageState extends State<SplashPage> {
         body: Stack(
           children: [
             Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
                     'assets/images/splash_background.png',
