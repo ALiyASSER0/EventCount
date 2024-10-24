@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustemBtn extends StatelessWidget {
+class CustemBtn extends StatelessWidget 
+{
   const CustemBtn({super.key, this.onTap,  this.isLoading=false});
   final void Function()? onTap;
   final bool isLoading;
@@ -22,8 +23,9 @@ class CustemBtn extends StatelessWidget {
               child: CircularProgressIndicator(
                  color: Colors.white,
               ),
-            ) : const Text(
-          "Add",
+            ) : const Text
+            (
+          "Save",
           style: TextStyle(
               color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
         )),

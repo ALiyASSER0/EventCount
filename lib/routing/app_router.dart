@@ -1,4 +1,5 @@
 
+import 'package:event_count_downar/events/Tasks_details.dart';
 import 'package:event_count_downar/onboarding/onboarding_page.dart';
 import 'package:event_count_downar/routing/routes.dart';
 import 'package:event_count_downar/views/home_view.dart';
@@ -24,6 +25,9 @@ Route<dynamic>? onGenerateRoute(RouteSettings routeSettings) {
     case Routes.installments:
       return MaterialPageRoute(
           builder: (_) => const InstallmentsView(), settings: routeSettings);
+    case Routes.addEvent:
+      return MaterialPageRoute(
+          builder: (_) => TasksDetails(), settings: routeSettings);
     default:
       return null;
   }

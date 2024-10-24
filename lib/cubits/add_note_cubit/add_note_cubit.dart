@@ -7,10 +7,12 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 part 'add_notes_state.dart';
 
-class AddNoteCubit extends Cubit<AddNoteState> {
+class AddNoteCubit extends Cubit<AddNoteState> 
+{
   AddNoteCubit() : super(AddNotesInitial());
 
-  addNote(NoteModel note) async {
+  addNote(NoteModel note) async 
+  {
       emit(AddNotesLoading());
     try {
   var noteBox = Hive.box<NoteModel>(kNoteBox);

@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 
-class CustemTextField extends StatelessWidget {
-  const CustemTextField(
-      {super.key, required this.hint, this.maxlines = 1, this.onSaved, this.onChange});
-  final String hint;
+class CustemTextField extends StatelessWidget 
+{
+  const CustemTextField
+  (
+      {super.key,  this.hint, this.maxlines = 1, this.onSaved, this.onChange,required this.label});
+  final String ? hint,label;
   final int maxlines;
   final void Function(String)? onChange;
   final void Function(String?)? onSaved;
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
+    return TextFormField
+    (
       onChanged: onChange,
       onSaved: onSaved,
       validator: (value) {
@@ -21,18 +24,21 @@ class CustemTextField extends StatelessWidget {
       },
       cursorColor: const Color.fromARGB(255, 0, 0, 0),
       maxLines: maxlines,
-      decoration: InputDecoration(
+      decoration: InputDecoration
+      (
+        labelText: label,
           hintText: hint,
           hintStyle: const TextStyle(color: Colors.black),
           border: buildBorder(),
           enabledBorder: buildBorder(),
-          focusedBorder: buildBorder(const Color.fromARGB(255, 0, 0, 0))),
+          focusedBorder: buildBorder(Colors.blue)),
+
     );
   }
 
   OutlineInputBorder buildBorder([color]) {
     return OutlineInputBorder(
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(20),
         borderSide: BorderSide(color: color ?? const Color.fromARGB(255, 0, 0, 0)));
   }
 }

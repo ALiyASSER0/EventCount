@@ -8,8 +8,8 @@ class OnBoardingBuilder extends StatelessWidget {
   const OnBoardingBuilder({super.key, required this.model});
 
   @override
-  Widget build(BuildContext context) {
-
+  Widget build(BuildContext context)
+  {
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Column(
