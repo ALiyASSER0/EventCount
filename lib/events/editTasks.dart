@@ -1,6 +1,4 @@
-import 'package:event_count_downar/constants/colors.dart';
 import 'package:event_count_downar/cubits/add_note_cubit/add_note_cubit.dart';
-import 'package:event_count_downar/cubits/notes_cubit/notes_cubit.dart';
 import 'package:event_count_downar/events/date_selector.dart';
 import 'package:event_count_downar/events/notification_selector.dart';
 import 'package:event_count_downar/events/stander_faild.dart';
@@ -15,13 +13,15 @@ import 'package:hive/hive.dart';
 //import 'package:intl/intl.dart';
 
 
-class TasksDetails extends StatefulWidget 
+class EditTasks extends StatefulWidget 
 {
+  final NoteModel note;
+  EditTasks({required this.note});
   @override
   _TasksDetailsState createState() => _TasksDetailsState();
 }
 
-class _TasksDetailsState extends State<TasksDetails> 
+class _TasksDetailsState extends State<EditTasks> 
 {
   // تعريف المتغيرات التي ستحفظ البيانات المدخلة
   final TextEditingController titleController = TextEditingController();
@@ -130,22 +130,25 @@ class _TasksDetailsState extends State<TasksDetails>
                           );
                         }
                       ),
-                      BlocBuilder<NotesCubit,NotesState>
+                      ElevatedButton
                       (
-                        builder: (BuildContext context, state)
+
+                        onPressed: () async 
                         {
-                          return ElevatedButton
+                          var box = Hive.box('tasksBox');
+                          await box.add
                           (
-                            onPressed: () async 
                             {
-                             // BlocProvider.of<NotesCubit>(context).fetchAllNotes();
-                              var noteBox = Hive.box<NoteModel>(kNoteBox);
-                              List<NoteModel>? notes= noteBox.values.toList();
-                              print(notes);
-                            },
-                            child: Text('print'),
+                              'title': titleController.text,
+                              'description': descriptionController.text,
+                              'date': selectedDate != null ? selectedDate!.toIso8601String() : '',
+                              'time': selectedTime != null ? selectedTime!.format(context) : '',  // حفظ الوقت
+                              'notification': selectedNotification,
+                            }
                           );
-                        }
+                          print('تم الحفظ');
+                        },
+                        child: Text('Save'),
                       ),
                       ElevatedButton(
                         onPressed: () 

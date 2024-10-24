@@ -9,7 +9,8 @@ class HomeView extends StatefulWidget {
   State<HomeView> createState() => _HomeViewState();
 }
 
-class _HomeViewState extends State<HomeView> {
+class _HomeViewState extends State<HomeView> 
+{
   List<Widget> screen = const [NotesView(), InstallmentsView()];
 
   int currentIndex = 0;

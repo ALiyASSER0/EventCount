@@ -1,4 +1,7 @@
+import 'package:event_count_downar/events/Tasks_details.dart';
+import 'package:event_count_downar/events/editTasks.dart';
 import 'package:event_count_downar/models/note_model.dart';
+import 'package:event_count_downar/routing/routes.dart';
 import 'package:event_count_downar/views/edit_note_view.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +11,8 @@ class NoteItem extends StatelessWidget {
 
   final NoteModel note;
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) 
+  {
     return Container(
       padding: const EdgeInsets.only(bottom: 24, top: 24, left: 10),
       decoration: BoxDecoration(
@@ -23,20 +27,24 @@ class NoteItem extends StatelessWidget {
               note.title,
               style: const TextStyle(color: Colors.white, fontSize: 26),
             ),
-            subtitle: Padding(
+            subtitle: Padding
+            (
               padding: const EdgeInsets.only(top: 10),
-              child: Text(note.subTitle,
+              child: Text(note.description,
                   style: const TextStyle(color: Colors.white, fontSize: 18)),
             ),
       
-            trailing: Padding(
+            trailing: Padding
+            (
               padding: const EdgeInsets.only(bottom: 20),
               child: IconButton(
                   onPressed: () {
                       Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) {
-                      return EditNoteView(
+                    MaterialPageRoute(builder: (context) 
+                    {
+                      return EditTasks
+                      (
                         note: note,
                       );
                     }),
@@ -51,7 +59,7 @@ class NoteItem extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(right: 24),
-            child: Text(note.date,
+            child: Text(note.endDate,
                 style: const TextStyle(color: Colors.white, fontSize: 16)),
           )
         ],

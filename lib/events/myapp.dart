@@ -1,5 +1,5 @@
+import 'package:event_count_downar/events/Tasks_details.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Tasks_details.dart';
 
 class MyApp extends StatelessWidget 
 {
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget
     return MaterialApp
     (
       debugShowCheckedModeBanner: false,
-      home: TasksDetails(),
+      //home: TasksDetails(),
       
     );
   }
