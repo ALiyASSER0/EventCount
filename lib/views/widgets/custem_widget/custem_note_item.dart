@@ -1,8 +1,6 @@
-import 'package:event_count_downar/events/Tasks_details.dart';
 import 'package:event_count_downar/events/editTasks.dart';
 import 'package:event_count_downar/models/note_model.dart';
-import 'package:event_count_downar/routing/routes.dart';
-import 'package:event_count_downar/views/edit_note_view.dart';
+
 import 'package:flutter/material.dart';
 
 
@@ -43,9 +41,12 @@ class NoteItem extends StatelessWidget {
                     context,
                     MaterialPageRoute(builder: (context) 
                     {
-                      return EditTasks
-                      (
-                        note: note,
+                      return Directionality(
+                          textDirection: TextDirection.rtl,
+                        child: EditTasks
+                        (
+                          note: note,
+                        ),
                       );
                     }),
                   );

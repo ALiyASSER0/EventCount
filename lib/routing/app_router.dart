@@ -1,7 +1,7 @@
 
-import 'package:event_count_downar/events/Tasks_details.dart';
 import 'package:event_count_downar/onboarding/onboarding_page.dart';
 import 'package:event_count_downar/routing/routes.dart';
+import 'package:event_count_downar/views/add_note.dart';
 import 'package:event_count_downar/views/home_view.dart';
 import 'package:event_count_downar/views/installments_view.dart';
 import 'package:event_count_downar/views/notes_view.dart';
@@ -27,7 +27,7 @@ Route<dynamic>? onGenerateRoute(RouteSettings routeSettings) {
           builder: (_) => const InstallmentsView(), settings: routeSettings);
     case Routes.addEvent:
       return MaterialPageRoute(
-          builder: (_) => TasksDetails(), settings: routeSettings);
+          builder: (_) => const AddNote(), settings: routeSettings);
     default:
       return null;
   }

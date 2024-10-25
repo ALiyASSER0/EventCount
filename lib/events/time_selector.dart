@@ -1,35 +1,35 @@
 import 'package:flutter/material.dart';
 
-class TimeSelector extends StatefulWidget 
-{
+class TimeSelector extends StatefulWidget {
+  final Function(TimeOfDay?) onTimeSelected;
+
+  TimeSelector({required this.onTimeSelected});
+
   @override
   _TimeSelectorState createState() => _TimeSelectorState();
 }
 
-class _TimeSelectorState extends State<TimeSelector> 
-{
+class _TimeSelectorState extends State<TimeSelector> {
   TimeOfDay? selectedTime;
 
-  Future<void> _selectTime(BuildContext context) async 
-  {
-    final TimeOfDay? pickedTime = await showTimePicker
-    (
+  Future<void> _selectTime(BuildContext context) async {
+    final TimeOfDay? pickedTime = await showTimePicker(
       context: context,
       initialTime: TimeOfDay.now(),
     );
-    if (pickedTime != null && pickedTime != selectedTime)
+    if (pickedTime != null && pickedTime != selectedTime) {
       setState(() {
         selectedTime = pickedTime;
       });
+      // Call the callback to notify the parent of the new time
+      widget.onTimeSelected(selectedTime);
+    }
   }
 
   @override
-  Widget build(BuildContext context) 
-  {
-    return Row
-    (
-      children: 
-      [
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
         Icon(Icons.access_time),
         SizedBox(width: 8),
         Text('الوقت النهائي: '),
@@ -42,16 +42,5 @@ class _TimeSelectorState extends State<TimeSelector>
         ),
       ],
     );
-  }
-}
-
-class UiTimeSelect extends StatelessWidget 
-{
-  const UiTimeSelect({super.key});
-
-  @override
-  Widget build(BuildContext context) 
-  {
-    return const Placeholder();
   }
 }

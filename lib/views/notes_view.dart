@@ -1,6 +1,4 @@
-import 'package:event_count_downar/events/Tasks_details.dart';
 import 'package:event_count_downar/routing/routes.dart';
-import 'package:event_count_downar/views/widgets/bottom_sheet/add_note_bottom_sheet.dart';
 import 'package:event_count_downar/views/widgets/notes_widget/notes_view_body.dart';
 import 'package:flutter/material.dart';
 

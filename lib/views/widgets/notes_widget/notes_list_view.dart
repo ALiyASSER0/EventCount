@@ -1,3 +1,4 @@
+import 'package:event_count_downar/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:event_count_downar/cubits/notes_cubit/notes_cubit.dart';
 import 'package:event_count_downar/models/note_model.dart';
 import 'package:event_count_downar/views/widgets/custem_widget/custem_note_item.dart';
@@ -12,6 +13,7 @@ class NotesListView extends StatelessWidget {
     return BlocBuilder<NotesCubit, NotesState>(
       builder: (context, state) {
         List<NoteModel> notes = BlocProvider.of<NotesCubit>(context).notes!;
+        
         if (notes.isEmpty) {
           return Column(
             children: [
@@ -36,15 +38,26 @@ class NotesListView extends StatelessWidget {
               padding: EdgeInsets.zero,
               itemBuilder: (context, index) {
                 return Dismissible(
-                  key: Key(index.toString()),
+                  key: ValueKey(notes[index].id), 
                   onDismissed: (direction) {
-                      notes[index].delete();
-                  BlocProvider.of<NotesCubit>(context).fetchAllNotes();
+                    final deletedNote = notes[index]; 
+                    deletedNote.delete(); 
+                    BlocProvider.of<NotesCubit>(context).fetchAllNotes(); 
+
                     ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text('${notes[index].title} dismissed')),
+                      SnackBar(
+                        content: Text('${deletedNote.title} dismissed'),
+                        action: SnackBarAction(
+                          label: 'UNDO',
+                          onPressed: () {
+                            BlocProvider.of<AddNoteCubit>(context).addNote(deletedNote);
+                            BlocProvider.of<NotesCubit>(context).fetchAllNotes(); 
+
+                          },
+                        ),
+                      ),
                     );
                   },
-                
                   child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 4),
                     child: NoteItem(note: notes[index]),

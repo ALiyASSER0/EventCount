@@ -5,6 +5,7 @@ import 'package:event_count_downar/onboarding/on_boarding_builder.dart';
 import 'package:event_count_downar/onboarding/onboarding_model.dart';
 import 'package:event_count_downar/routing/routes.dart';
 import 'package:event_count_downar/views/home_view.dart';
+import 'package:event_count_downar/views/notes_view.dart';
 import 'package:event_count_downar/views/widgets/custem_widget/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -51,7 +52,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       key: SharedKeys.islastOnBoarding, value: islast);
                   Navigator.pushAndRemoveUntil(
                       context,
-                      MaterialPageRoute(builder: (context) => HomeView()),
+                      MaterialPageRoute(builder: (context) => const NotesView()),
                       (route) => false);
                   isfirst = true;
                 });
