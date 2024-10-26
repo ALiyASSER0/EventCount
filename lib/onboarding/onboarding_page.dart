@@ -39,7 +39,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
           if (isfirst)
             TextButton(
               child: Text(
-                isfirst ? 'Skip' : '',
+                isfirst ? 'تخطى' : '',
                 style: TextStyle(
                   color: Colors.purple[900],
                   fontSize: 18.sp,
@@ -128,7 +128,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         duration: const Duration(milliseconds: 500),
                         curve: Curves.easeInOut);
               },
-              text: islast ? 'Get Started' : 'Next',
+              text: islast ? 'لنبدأ' : 'التالى',
             ),
             SizedBox(
               height: 4.h,

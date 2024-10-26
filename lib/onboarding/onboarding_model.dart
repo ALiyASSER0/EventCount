@@ -9,21 +9,21 @@ class OnboardingModel {
 
 List<OnboardingModel> data = [
   OnboardingModel(
-    label: "Countdown to Life's Biggest Moments!",
+    label: "العد التنازلي لأعظم لحظات الحياة",
     description:
-        'Track birthdays, meetings, and more. Keep your special events at your fingertips',
+        'تتبع أعياد الميلاد والاجتماعات والمزيد. اجعل مناسباتك الخاصة في متناول يديك',
     image: "assets/images/onboarding1.png",
   ),
   OnboardingModel(
-    label: 'Never Miss a Payment',
+    label: 'لا تفوت أي قسط',
     description:
-        'Stay organized by tracking installment payments and receiving timely reminders',
+        'كن منظما من خلال تتبع مدفوعات الأقساط وتلقي الاشعارات في الوقت المناسب',
     image: "assets/images/onboarding2.png",
   ),
   OnboardingModel(
-    label: 'Get Notified, Stay Ahead!',
+    label: 'تلقى الإشعارات وابقَ مستعدا',
     description:
-       "Receive custom reminders for events and payments, so you're always prepared",
+       "احصل على تذكيرات مخصصة للفعاليات والمدفوعات لتكون دائماً على استعداد",
     image: "assets/images/onboarding3.png",
   ),
 ];
