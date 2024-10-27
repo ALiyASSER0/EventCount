@@ -8,3 +8,10 @@ enum SharedKeys {
   login,
 
 }
+
+enum Notifications{
+  before1day,
+  before1hour,
+  before10minute,
+
+}

@@ -4,7 +4,7 @@ import 'package:intl/intl.dart';
 class DateSelector extends StatefulWidget {
   final Function(DateTime) onDateSelected; // Accepts a callback function
 
-  DateSelector({required this.onDateSelected}); // Constructor to take the callback
+  const DateSelector({super.key, required this.onDateSelected}); // Constructor to take the callback
 
   @override
   _DateSelectorState createState() => _DateSelectorState();
@@ -34,10 +34,10 @@ class _DateSelectorState extends State<DateSelector> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(Icons.calendar_today),
-        SizedBox(width: 8),
-        Text('تاريخ الانتهاء: '),
-        Spacer(),
+        const Icon(Icons.calendar_today),
+        const SizedBox(width: 8),
+        const Text('تاريخ الانتهاء: '),
+        const Spacer(),
         TextButton(
           onPressed: () => _selectDate(context),
           child: Text(selectedDate != null

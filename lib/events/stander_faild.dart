@@ -8,7 +8,7 @@ class StanderFaild extends StatelessWidget
   StanderFaild
   (
     
-    {required this.controler,required this.label,this.maxLines=1,}
+    {super.key, required this.controler,required this.label,this.maxLines=1,}
     
   );
 
@@ -29,7 +29,7 @@ class StanderFaild extends StatelessWidget
                   focusedBorder: OutlineInputBorder
                   (
                     borderRadius: BorderRadius.circular(20),
-                    borderSide: BorderSide(color: Colors.blue)
+                    borderSide: const BorderSide(color: Colors.blue)
                   )
                 ),
                 maxLines: maxLines,

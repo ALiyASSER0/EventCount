@@ -70,7 +70,7 @@ class _EditTasksState extends State<EditTasks> {
               SizedBox(height: 10),
 
               NotificationSelector(
-                selectedNotification: selectedNotification,
+                selectedNotification: selectedNotification, onNotificationChanged: (String? value) {  },
               ),
               SizedBox(
                 height: 20,

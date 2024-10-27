@@ -12,7 +12,7 @@ class CustemTextField extends StatelessWidget {
   }){
     if (controller.text.isEmpty && hint != null) {
       controller.text = hint!; 
-    };
+    }
   }
 
   final String? hint, label;

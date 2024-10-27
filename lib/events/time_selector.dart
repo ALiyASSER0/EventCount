@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class TimeSelector extends StatefulWidget {
   final Function(TimeOfDay?) onTimeSelected;
 
-  TimeSelector({required this.onTimeSelected});
+  const TimeSelector({super.key, required this.onTimeSelected});
 
   @override
   _TimeSelectorState createState() => _TimeSelectorState();
@@ -30,10 +30,10 @@ class _TimeSelectorState extends State<TimeSelector> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(Icons.access_time),
-        SizedBox(width: 8),
-        Text('الوقت النهائي: '),
-        Spacer(),
+        const Icon(Icons.access_time),
+        const SizedBox(width: 8),
+        const Text('الوقت النهائي: '),
+        const Spacer(),
         TextButton(
           onPressed: () => _selectTime(context),
           child: Text(selectedTime != null
