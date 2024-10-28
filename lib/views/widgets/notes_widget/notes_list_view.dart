@@ -5,15 +5,22 @@ import 'package:event_count_downar/views/widgets/custem_widget/custem_note_item.
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class NotesListView extends StatelessWidget {
-  const NotesListView({super.key});
+// ignore: must_be_immutable
+class NotesListView extends StatefulWidget {
+   NotesListView({super.key,required this.color});
+  String color;
 
+  @override
+  State<NotesListView> createState() => _NotesListViewState();
+}
+
+class _NotesListViewState extends State<NotesListView> {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<NotesCubit, NotesState>(
       builder: (context, state) {
         List<NoteModel> notes = BlocProvider.of<NotesCubit>(context).notes!;
-        
+
         if (notes.isEmpty) {
           return Column(
             children: [
@@ -38,11 +45,11 @@ class NotesListView extends StatelessWidget {
               padding: EdgeInsets.zero,
               itemBuilder: (context, index) {
                 return Dismissible(
-                  key: ValueKey(notes[index].id), 
+                  key: ValueKey(notes[index].id),
                   onDismissed: (direction) {
-                    final deletedNote = notes[index]; 
-                    deletedNote.delete(); 
-                    BlocProvider.of<NotesCubit>(context).fetchAllNotes(); 
+                    final deletedNote = notes[index];
+                    deletedNote.delete();
+                    BlocProvider.of<NotesCubit>(context).fetchAllNotes();
 
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
@@ -50,9 +57,10 @@ class NotesListView extends StatelessWidget {
                         action: SnackBarAction(
                           label: 'UNDO',
                           onPressed: () {
-                            BlocProvider.of<AddNoteCubit>(context).addNote(deletedNote);
-                            BlocProvider.of<NotesCubit>(context).fetchAllNotes(); 
-
+                            BlocProvider.of<AddNoteCubit>(context)
+                                .addNote(deletedNote);
+                            BlocProvider.of<NotesCubit>(context)
+                                .fetchAllNotes();
                           },
                         ),
                       ),
@@ -60,7 +68,7 @@ class NotesListView extends StatelessWidget {
                   },
                   child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 4),
-                    child: NoteItem(note: notes[index]),
+                    child: NoteItem(note: notes[index],color:widget.color),
                   ),
                 );
               },

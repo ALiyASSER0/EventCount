@@ -39,7 +39,7 @@ class InstallmentsListView extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Padding(
                   padding: const EdgeInsets.symmetric(vertical: 4),
-                  child: NoteItem(note: notes[index]),
+                  child: NoteItem(note: notes[index],color: "card1",),
                 );
               },
             ),

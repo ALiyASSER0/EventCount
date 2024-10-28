@@ -6,6 +6,7 @@ enum SharedKeys {
   phone,
   name,
   login,
+  colorOfTheme
 
 }
 

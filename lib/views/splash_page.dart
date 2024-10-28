@@ -19,7 +19,7 @@ class _SplashPageState extends State<SplashPage> {
     Future.delayed(const Duration(seconds: 5), () {
       Shared.getBOOL(key: SharedKeys.islastOnBoarding) ? Navigator.pushNamedAndRemoveUntil(
         context,
-        Routes.homeView,
+        Routes.noteViewWithCard1,
         (route) => false,
 
       ):

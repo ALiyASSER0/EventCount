@@ -1,4 +1,5 @@
 import 'package:event_count_downar/views/installments_view.dart';
+import 'package:event_count_downar/views/my_drawer_list.dart';
 import 'package:event_count_downar/views/notes_view.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,7 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> 
 {
-  List<Widget> screen = const [NotesView(), InstallmentsView()];
+  List<Widget> screen =  [NotesView(color: "card1",), const InstallmentsView()];
 
   int currentIndex = 0;
 
@@ -31,6 +32,7 @@ class _HomeViewState extends State<HomeView>
           BottomNavigationBarItem(icon: Icon(Icons.payments), label: "الاقساط"),
         ],
       ),
+    
     );
   }
 }

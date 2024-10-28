@@ -1,11 +1,19 @@
 import 'package:event_count_downar/routing/routes.dart';
+import 'package:event_count_downar/views/my_drawer_list.dart';
 import 'package:event_count_downar/views/widgets/notes_widget/notes_view_body.dart';
 import 'package:flutter/material.dart';
 
 
-class NotesView extends StatelessWidget {
-  const NotesView({super.key});
+// ignore: must_be_immutable
+class NotesView extends StatefulWidget {
+     NotesView({super.key,required this.color});
+  String color;
 
+  @override
+  State<NotesView> createState() => _NotesViewState();
+}
+
+class _NotesViewState extends State<NotesView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +26,11 @@ class NotesView extends StatelessWidget {
           Navigator.pushNamed(context,Routes.addEvent);
         },
         child:const Icon(Icons.add)),
-      body: const NotesViewBody(),
+      body:  NotesViewBody(color:widget.color),
+      drawer: const Drawer(
+         width: 290, 
+        child: MyDrawerList(),
+      ),
     );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:event_count_downar/views/my_drawer_list.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -12,7 +13,12 @@ class CustomAppBar extends StatelessWidget {
     return Row(
        mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const Icon(Icons.menu),
+         IconButton(
+          icon: Icon(Icons.menu),
+          onPressed: () {
+            Scaffold.of(context).openDrawer(); // Opens the drawer
+          },
+        ),
         Text(
           title,
           style:  const TextStyle(fontSize: 28),

@@ -4,8 +4,10 @@ import 'package:event_count_downar/views/widgets/notes_widget/notes_list_view.da
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+// ignore: must_be_immutable
 class NotesViewBody extends StatefulWidget {
-  const NotesViewBody({super.key});
+     NotesViewBody({super.key,required this.color});
+  String color;
 
   @override
   State<NotesViewBody> createState() => _NotesViewBodyState();
@@ -20,18 +22,18 @@ class _NotesViewBodyState extends State<NotesViewBody> {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 45,
           ),
-          CustomAppBar(
+          const CustomAppBar(
             title: 'الاحداث القادمه',
           image:  AssetImage("assets/images/mlogo.png"),
           ),
-          Expanded(child: NotesListView()),
+          Expanded(child: NotesListView(color:widget.color)),
           
         ],
       ),
