@@ -149,7 +149,7 @@ class _NoteItemState extends State<NoteItem> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: Container(
+            child: SizedBox(
               width: double.infinity,
               child: Text(widget.note.endDate,
                   textAlign: TextAlign.left,

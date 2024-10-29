@@ -59,20 +59,20 @@ class _EditTasksState extends State<EditTasks> {
                 controller: titleController,
               ),
 
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
 
               DateSelector(onDateSelected: _onDateSelected),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
 
               TimeSelector(
                 onTimeSelected: _onTimeSelected,
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
 
               NotificationSelector(
                 selectedNotification: selectedNotification, onNotificationChanged: (String? value) {  },
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
 
@@ -82,7 +82,7 @@ class _EditTasksState extends State<EditTasks> {
                 controller: descriptionController,
                 maxlines: 5,
               ),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
 
               // الأزرار
               Row(
@@ -115,7 +115,7 @@ class _EditTasksState extends State<EditTasks> {
                       Navigator.pop(context);
                       BlocProvider.of<NotesCubit>(context).fetchAllNotes();
                     },
-                    child: Text('Delete'),
+                    child: const Text('Delete'),
                   ),
                 ],
               ),

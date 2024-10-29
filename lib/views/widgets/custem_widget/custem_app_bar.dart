@@ -13,7 +13,7 @@ class CustomAppBar extends StatelessWidget {
        mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
          IconButton(
-          icon: Icon(Icons.menu),
+          icon: const Icon(Icons.menu),
           onPressed: () {
             Scaffold.of(context).openDrawer(); // Opens the drawer
           },
