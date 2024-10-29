@@ -104,7 +104,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
                               description: descriptionController.text,
                               endDate: DateFormat('yyyy-MM-dd')
                                   .format(selectedDate ?? DateTime.now()),
-                              endTime: selectedTime.toString(),
+                              endTime: "${selectedTime?.hour}:${selectedTime?.minute}",
                               timeNotification: selectedNotification!,
                               id: const Uuid().v4(),
                             );
