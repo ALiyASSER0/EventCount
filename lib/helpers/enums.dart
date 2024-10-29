@@ -6,8 +6,8 @@ enum SharedKeys {
   phone,
   name,
   login,
-  colorOfTheme
-
+  colorOfTheme,
+isFirstTimeFeedbackScreen
 }
 
 enum Notifications{

@@ -28,6 +28,7 @@ class _NotesViewState extends State<NotesView> {
         child:const Icon(Icons.add)),
       body:  NotesViewBody(color:widget.color),
       drawer: const Drawer(
+        backgroundColor: Colors.white,
          width: 290, 
         child: MyDrawerList(),
       ),

@@ -47,6 +47,9 @@ dependencies:
   awesome_notifications: ^0.10.0
   flutter_launcher_icons: ^0.14.1
   package_rename: ^1.7.1
+  feedback: ^3.1.0
+  flutter_email_sender: ^6.0.3
+  path_provider: ^2.1.4
 
 
 dev_dependencies:

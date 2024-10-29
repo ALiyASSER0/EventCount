@@ -10,6 +10,8 @@ import 'package:event_count_downar/views/splash_page.dart';
 import 'package:event_count_downar/views/theme_my_app.dart';
 import 'package:flutter/material.dart';
 
+import '../views/feedback.dart';
+
 Route<dynamic>? onGenerateRoute(RouteSettings routeSettings) {
   switch (routeSettings.name) {
     case Routes.splash:
@@ -42,6 +44,9 @@ Route<dynamic>? onGenerateRoute(RouteSettings routeSettings) {
     case Routes.aboutApp:
       return MaterialPageRoute(
           builder: (_) =>  AboutPage(), settings: routeSettings);      
+    case Routes.feedback:
+      return MaterialPageRoute(
+          builder: (_) =>  const Feedbackscreen(), settings: routeSettings);      
     default:
       return null;
   }

@@ -66,6 +66,7 @@ Widget menuItem(int id, String title, IconData icon, bool selected) {
             }
             else if (id == 4) {
               currentPage = DrawerSection.support;
+                 Navigator.pushNamed(context, Routes.feedback);
             }
           });
         },

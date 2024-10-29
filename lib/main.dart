@@ -6,6 +6,7 @@ import 'package:event_count_downar/models/note_model.dart';
 import 'package:event_count_downar/routing/app_router.dart';
 import 'package:event_count_downar/routing/routes.dart';
 import 'package:event_count_downar/sample_bloc_observable.dart';
+import 'package:feedback/feedback.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
@@ -30,7 +31,7 @@ void main() async {
         channelName: 'Basic notifications',
         channelDescription: 'Notification channel for basic tests',
         importance: NotificationImportance.High, 
-        defaultColor: Color(0xFF9D50DD),
+        defaultColor: const Color(0xFF9D50DD),
         ledColor: Colors.white,
       ),
     ],
@@ -44,7 +45,7 @@ void main() async {
     }
   });
 
-  runApp(const MyApp());
+  runApp(const BetterFeedback( child: MyApp()));
 }
 
 class MyApp extends StatefulWidget {

@@ -9,4 +9,6 @@ class Routes {
   static const String installments="Installments";
   static const String addEvent="EventDetails";
   static const String aboutApp="AboutApp";
+  static const String feedback="Feedback";
+
 }
