@@ -45,13 +45,31 @@ dependencies:
   shared_preferences: ^2.3.2
   flutter_bloc: ^8.1.6
   awesome_notifications: ^0.10.0
+  flutter_launcher_icons: ^0.14.1
+  package_rename: ^1.7.1
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   hive_generator: ^2.0.1
-  build_runner: ^2.4.13    
+  build_runner: ^2.4.13
+
+flutter_launcher_icons:
+  image_path: "assets/images/logo_app.png"
+  android: true
+  ios: true
+  remove_alpha_channel_ios: true
+
+package_rename_config:
+  android:
+    app_name: Event Tick
+    package_name: com.example.event_count_downar
+
+  ios:
+    app_name: Event Tick
+    bundle_name: com.event_count
+    package_name: com.event_count
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

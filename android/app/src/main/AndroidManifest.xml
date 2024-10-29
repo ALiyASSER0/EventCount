@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="event_count_downar"
+        android:label="Event Tick"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
 

@@ -87,7 +87,7 @@ class _MyAppState extends State<MyApp> {
               debugShowCheckedModeBanner: false,
               theme: ThemeData(fontFamily: "Poppins"),
               onGenerateRoute: onGenerateRoute,
-              initialRoute: Routes.onboarding,
+              initialRoute: Routes.splash,
             );
           },
         ),
