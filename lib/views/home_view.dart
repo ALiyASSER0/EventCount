@@ -1,5 +1,4 @@
 import 'package:event_count_downar/views/installments_view.dart';
-import 'package:event_count_downar/views/my_drawer_list.dart';
 import 'package:event_count_downar/views/notes_view.dart';
 import 'package:flutter/material.dart';
 

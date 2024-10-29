@@ -1,7 +1,6 @@
 import 'package:event_count_downar/constants/colors.dart';
 import 'package:event_count_downar/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:event_count_downar/cubits/notes_cubit/notes_cubit.dart';
-import 'package:event_count_downar/helpers/notification.dart';
 import 'package:event_count_downar/helpers/shared.dart';
 import 'package:event_count_downar/models/note_model.dart';
 import 'package:event_count_downar/routing/app_router.dart';
