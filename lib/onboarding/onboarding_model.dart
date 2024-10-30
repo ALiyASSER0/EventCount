@@ -15,15 +15,15 @@ List<OnboardingModel> data = [
     image: "assets/images/onboarding1.png",
   ),
   OnboardingModel(
-    label: 'لا تفوت أي قسط',
+    label: 'تابع مهامك بسهولة وتجنب أي نسيان',
     description:
-        'كن منظما من خلال تتبع مدفوعات الأقساط وتلقي الاشعارات في الوقت المناسب',
+        'ابقَ منظماً من خلال تتبع التزاماتك وتلقي الإشعارات في الوقت المناسب',
     image: "assets/images/onboarding2.png",
   ),
   OnboardingModel(
-    label: 'تلقى الإشعارات وابقَ مستعدا',
+    label: 'لا تدع أي مهمة أو موعد يفوتك بعد الآن',
     description:
-       "احصل على تذكيرات مخصصة للفعاليات والمدفوعات لتكون دائماً على استعداد",
+       "احصل على تذكيرات مخصصة للفعاليات والمواعيد لتكون دائماً على استعداد",
     image: "assets/images/onboarding3.png",
   ),
 ];
