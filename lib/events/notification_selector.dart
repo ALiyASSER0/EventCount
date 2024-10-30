@@ -12,10 +12,10 @@ class NotificationSelector extends StatefulWidget {
   });
 
   @override
-  _NotificationSelectorState createState() => _NotificationSelectorState();
+  NotificationSelectorState createState() => NotificationSelectorState();
 }
 
-class _NotificationSelectorState extends State<NotificationSelector> {
+class NotificationSelectorState extends State<NotificationSelector> {
   String? selectedNotification;
   final List<String> notifications = [
     "1 day before",

@@ -1,5 +1,6 @@
 import 'package:event_count_downar/routing/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 
 class MyDrawerList extends StatefulWidget {
   const MyDrawerList({super.key});
@@ -10,6 +11,11 @@ class MyDrawerList extends StatefulWidget {
 
 class _MyDrawerListState extends State<MyDrawerList> {
   var currentPage = DrawerSection.theme;
+  final String appLink = 'https://drive.google.com/drive/folders/1hNmW9D6EwwKWtEWwEJnYGqnmgjFvSnTf?usp=sharing';
+
+  void shareAppLink() {
+    Share.share('Check out this app: $appLink');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -63,6 +69,7 @@ Widget menuItem(int id, String title, IconData icon, bool selected) {
                 Navigator.pushNamed(context, Routes.aboutApp);
             } else if (id == 3) {
               currentPage = DrawerSection.share;
+shareAppLink();
             }
             else if (id == 4) {
               currentPage = DrawerSection.support;
