@@ -1,7 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:event_count_downar/helpers/enums.dart';
 import 'package:event_count_downar/helpers/shared.dart';
-import 'package:event_count_downar/routing/routes.dart';
+import 'package:event_count_downar/Routes/routes.dart';
 
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';

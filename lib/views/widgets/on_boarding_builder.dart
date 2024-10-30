@@ -1,4 +1,4 @@
-import 'package:event_count_downar/onboarding/onboarding_model.dart';
+import 'package:event_count_downar/models/onboarding_model.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 

@@ -3,8 +3,7 @@ import 'package:event_count_downar/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:event_count_downar/cubits/notes_cubit/notes_cubit.dart';
 import 'package:event_count_downar/helpers/shared.dart';
 import 'package:event_count_downar/models/note_model.dart';
-import 'package:event_count_downar/routing/app_router.dart';
-import 'package:event_count_downar/routing/routes.dart';
+
 import 'package:event_count_downar/sample_bloc_observable.dart';
 import 'package:feedback/feedback.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +11,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:sizer/sizer.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
+
+import 'Routes/app_router.dart';
+import 'Routes/routes.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

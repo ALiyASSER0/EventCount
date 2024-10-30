@@ -1,9 +1,9 @@
 import 'package:event_count_downar/constants/colors.dart';
 import 'package:event_count_downar/helpers/enums.dart';
 import 'package:event_count_downar/helpers/shared.dart';
-import 'package:event_count_downar/onboarding/on_boarding_builder.dart';
-import 'package:event_count_downar/onboarding/onboarding_model.dart';
-import 'package:event_count_downar/routing/routes.dart';
+import 'package:event_count_downar/views/widgets/on_boarding_builder.dart';
+import 'package:event_count_downar/models/onboarding_model.dart';
+import 'package:event_count_downar/Routes/routes.dart';
 import 'package:event_count_downar/views/notes_view.dart';
 import 'package:event_count_downar/views/widgets/custem_widget/custom_button.dart';
 import 'package:flutter/material.dart';

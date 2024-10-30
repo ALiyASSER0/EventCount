@@ -1,4 +1,3 @@
-import 'package:event_count_downar/views/installments_view.dart';
 import 'package:event_count_downar/views/notes_view.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +10,7 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> 
 {
-  List<Widget> screen =  [NotesView(color: "card1",), const InstallmentsView()];
+  List<Widget> screen =  [NotesView(color: "card1",)];
 
   int currentIndex = 0;
 
@@ -28,7 +27,6 @@ class _HomeViewState extends State<HomeView>
         },
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.event), label: "الاحداث"),
-          BottomNavigationBarItem(icon: Icon(Icons.payments), label: "الاقساط"),
         ],
       ),
     
