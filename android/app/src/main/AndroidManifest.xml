@@ -53,6 +53,8 @@
 
     <queries>
         <intent>
+          <action android:name="android.intent.action.SENDTO" />
+      <data android:scheme="mailto" />
             <action android:name="android.intent.action.PROCESS_TEXT" />
             <data android:mimeType="text/plain" />
         </intent>
