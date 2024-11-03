@@ -13,9 +13,11 @@
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
             android:windowSoftInputMode="adjustResize">
+            
             <meta-data
                 android:name="io.flutter.embedding.android.NormalTheme"
                 android:resource="@style/NormalTheme" />
+            
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -26,9 +28,11 @@
         <receiver
             android:name="me.carda.awesome_notifications.notifications.receivers.ActionReceiver"
             android:exported="true" />
+        
         <receiver
             android:name="me.carda.awesome_notifications.notifications.receivers.DismissedReceiver"
             android:exported="true" />
+        
         <receiver
             android:name="me.carda.awesome_notifications.notifications.receivers.ScheduledNotificationReceiver"
             android:permission="android.permission.RECEIVE_BOOT_COMPLETED"
@@ -43,7 +47,6 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
-
     </application>
 
     <!-- Permissions -->
@@ -51,10 +54,16 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
+    <!-- Query for external intents -->
     <queries>
+        <!-- Intent to handle mailto scheme -->
         <intent>
-          <action android:name="android.intent.action.SENDTO" />
-      <data android:scheme="mailto" />
+            <action android:name="android.intent.action.SENDTO" />
+            <data android:scheme="mailto" />
+        </intent>
+
+        <!-- Intent to process text with plain text mime type -->
+        <intent>
             <action android:name="android.intent.action.PROCESS_TEXT" />
             <data android:mimeType="text/plain" />
         </intent>

@@ -40,7 +40,7 @@ Route<dynamic>? onGenerateRoute(RouteSettings routeSettings) {
           builder: (_) => const AddNote(), settings: routeSettings);
     case Routes.aboutApp:
       return MaterialPageRoute(
-          builder: (_) =>  AboutPage(), settings: routeSettings);      
+          builder: (_) =>  const AboutPage(), settings: routeSettings);      
     case Routes.feedback:
       return MaterialPageRoute(
           builder: (_) =>  const Feedbackscreen(), settings: routeSettings);      
